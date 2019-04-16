@@ -14,8 +14,10 @@ class ShoppingListItem {
   }
 
   render() {
-    return `<li class="completed_${this.isDone}"><span>${this.name}</span> <span>${this.description}</span></li>`
+    return `<li class="completed_${this.isDone}"><span>${this.name}</span> <span>${this.description}</span></li>`;
   }
 }
 
-module.exports = ShoppingListItem;
+class ShoppingList {}
+
+(module.exports = ShoppingListItem), ShoppingList;

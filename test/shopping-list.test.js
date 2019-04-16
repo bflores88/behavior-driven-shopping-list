@@ -1,9 +1,10 @@
 const ShoppingListItem = require('../public/js/app.js');
+const ShoppingList = require('../public/js/app.js');
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
 
-describe('Shopping List', function() {
+describe('Shopping List Item', function() {
   //class test
   it('should be a function', function() {
     ShoppingListItem.should.be.a('function');
@@ -65,11 +66,12 @@ describe('Shopping List', function() {
 
   it('expect render to return an HTML-formatted string', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
-    (apple.render()).should.equal('<li class="completed_false"><span>Apple</span> <span>tasty treat</span></li>')
+    apple.render().should.equal('<li class="completed_false"><span>Apple</span> <span>tasty treat</span></li>');
   });
-
-
-
 });
 
-console.log(ShoppingListItem);
+describe('Shopping List', function() {
+  it('should be a function', function() {
+    ShoppingList.should.be.a('function');
+  });
+});
