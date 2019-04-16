@@ -34,10 +34,21 @@ describe('Shopping List', function() {
     expect(apple.check).to.be.a('function');
   });
 
-  it('expect check method to set isDone to true', function (){
+  it('expect check method to set isDone to true', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
     apple.check();
     apple.isDone.should.equal(true);
+  });
+
+  it('unCheck should be a function', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    expect(apple.unCheck).to.be.a('function');
+  });
+
+  it('expect unCheck method to set isDone to false', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    apple.unCheck();
+    apple.isDone.should.equal(false);
   });
 });
 

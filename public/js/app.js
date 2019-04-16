@@ -5,8 +5,11 @@ class ShoppingListItem {
     this.isDone = false;
   }
 
-  check(){
+  check() {
     this.isDone = true;
+  }
+  unCheck() {
+    this.isDone = false;
   }
 }
 
