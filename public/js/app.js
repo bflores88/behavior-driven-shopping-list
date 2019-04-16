@@ -8,8 +8,13 @@ class ShoppingListItem {
   check() {
     this.isDone = true;
   }
+
   unCheck() {
     this.isDone = false;
+  }
+
+  render() {
+    return `<li class="completed_${this.isDone}"><span>${this.name}</span> <span>${this.description}</span></li>`
   }
 }
 
