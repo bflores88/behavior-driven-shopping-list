@@ -1,6 +1,6 @@
 
-const ShoppingListItem = require('../public/js/shopping-list-item.js');
-const ShoppingList = require('../public/js/shopping-list.js');
+const ShoppingListItem = require('../js/shopping-list-item.js');
+const ShoppingList = require('../js/shopping-list.js');
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
