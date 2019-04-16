@@ -1,4 +1,4 @@
-const ShoppingListItem = require('../js/shopping-list-item.js');
+'use strict';
 
 class ShoppingList {
   constructor() {
@@ -10,8 +10,7 @@ class ShoppingList {
 
   addItem(item) {
     if (!(item instanceof ShoppingListItem)) {
-      //needs to be throw error
-      return;
+      throw new Error('needs to be shopping list item!');
     }
 
     this.items.push(item);
@@ -23,7 +22,7 @@ class ShoppingList {
       return;
     }
     if (this.items.indexOf(item) === -1) {
-      return;
+      throw new Error('item not found!');
     }
     let index = this.items.indexOf(item);
     this.items.splice(index, 1);
@@ -38,5 +37,3 @@ class ShoppingList {
     return output;
   }
 }
-
-module.exports = ShoppingList;

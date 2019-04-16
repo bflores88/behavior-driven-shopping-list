@@ -1,3 +1,5 @@
+'use strict';
+
 class ShoppingListItem {
   constructor(name, description) {
     this.name = name;
@@ -17,5 +19,3 @@ class ShoppingListItem {
     return `<li class="completed_${this.isDone}"><span>${this.name}</span> <span>${this.description}</span></li>`;
   }
 }
-
-module.exports = ShoppingListItem;

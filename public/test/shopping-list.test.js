@@ -1,6 +1,4 @@
-const ShoppingListItem = require('../js/shopping-list-item.js');
-const ShoppingList = require('../js/shopping-list.js');
-const chai = require('chai');
+
 const should = chai.should();
 const expect = chai.expect;
 
@@ -97,8 +95,7 @@ describe('Shopping List', function() {
   it('should only add shopping list item items', function() {
     let cart = new ShoppingList();
     let bird = {};
-    cart.addItem(bird);
-    expect(cart.items).to.deep.equal([]);
+    expect(function(){(cart.addItem(bird))}).to.throw(Error);
   });
 
   it('should add shopping list item to the items array', function() {
@@ -130,8 +127,7 @@ describe('Shopping List', function() {
     let bird = new ShoppingListItem('Apple', 'tasty treat');
     let banana = {};
     cart.addItem(bird);
-    cart.removeItem(banana);
-    expect(cart.removeItem(banana)).to.throw(new Error('error'));
+    expect(function(){(cart.removeItem(banana))}).to.throw(Error);
   });
   // render
   it('should concatenate the result of calling render on each item in items array', function() {
