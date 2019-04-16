@@ -22,6 +22,12 @@ describe('Shopping List', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
     apple.isDone.should.equal(false);
   });
+
+  it('should have a constructor that acecpts two arguments: name and description', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    apple.description.should.equal('tasty treat');
+    apple.name.should.equal('Apple');
+  });
 });
 
 console.log(ShoppingListItem);
