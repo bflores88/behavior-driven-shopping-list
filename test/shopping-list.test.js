@@ -1,12 +1,18 @@
-const ShoppingList = require('../public/js/app.js');
+const ShoppingListItem = require('../public/js/app.js');
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect();
 
 describe('Shopping List', function() {
   it('should be a function', function() {
-    ShoppingList.should.be.a('function');
+    ShoppingListItem.should.be.a('function');
   });
+
+  it('should have a property name', function(){
+    let apple = new ShoppingListItem ('Apple');
+    apple.name.should.equal('Apple')
+  });
+
 });
 
-console.log(ShoppingList);
+console.log(ShoppingListItem);

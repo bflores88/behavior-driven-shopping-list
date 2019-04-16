@@ -1,3 +1,7 @@
-class ShoppingList {}
+class ShoppingListItem {
+  constructor (name){
+    this.name = name
+  }
+}
 
-module.exports = ShoppingList;
+module.exports = ShoppingListItem;
