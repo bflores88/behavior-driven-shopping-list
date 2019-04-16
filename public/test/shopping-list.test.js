@@ -131,6 +131,19 @@ describe('Shopping List', function() {
     let banana = {};
     cart.addItem(bird);
     cart.removeItem(banana);
-    expect(cart.items).to.deep.equal([bird]);
+    expect(cart.removeItem(banana)).to.throw(new Error('error'));
+  });
+  // render
+  it('should concatenate the result of calling render on each item in items array', function() {
+    let cart = new ShoppingList();
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    let banana = new ShoppingListItem('Banana', 'yellow treat');
+    cart.addItem(apple);
+    cart.addItem(banana);
+    cart
+      .render()
+      .should.equal(
+        '<ul><li class="completed_false"><span>Apple</span> <span>tasty treat</span></li><li class="completed_false"><span>Banana</span> <span>yellow treat</span></li></ul>',
+      );
   });
 });
