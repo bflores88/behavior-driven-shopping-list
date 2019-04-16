@@ -1,4 +1,3 @@
-
 const ShoppingListItem = require('../js/shopping-list-item.js');
 const ShoppingList = require('../js/shopping-list.js');
 const chai = require('chai');
@@ -95,18 +94,43 @@ describe('Shopping List', function() {
   });
 
   //add item
-  it('should only add shopping list item items', function(){
+  it('should only add shopping list item items', function() {
     let cart = new ShoppingList();
     let bird = {};
     cart.addItem(bird);
     expect(cart.items).to.deep.equal([]);
   });
 
-  it('should add shopping list item to the items array', function(){
+  it('should add shopping list item to the items array', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
     let cart = new ShoppingList();
     cart.addItem(apple);
     expect(cart.items).to.deep.equal([apple]);
   });
-  
+
+  // remove item
+  it('should remove the item passed into the method', function() {
+    let cart = new ShoppingList();
+    let bird = new ShoppingListItem('Apple', 'tasty treat');
+    cart.addItem(bird);
+    cart.removeItem(bird);
+    expect(cart.items).to.deep.equal([]);
+  });
+
+  it('should remove the last item in the array if no parameters are added', function() {
+    let cart = new ShoppingList();
+    let bird = new ShoppingListItem('Apple', 'tasty treat');
+    cart.addItem(bird);
+    cart.removeItem();
+    expect(cart.items).to.deep.equal([]);
+  });
+
+  it('should throw error if item not found in array', function() {
+    let cart = new ShoppingList();
+    let bird = new ShoppingListItem('Apple', 'tasty treat');
+    let banana = {};
+    cart.addItem(bird);
+    cart.removeItem(banana);
+    expect(cart.items).to.deep.equal([bird]);
+  });
 });

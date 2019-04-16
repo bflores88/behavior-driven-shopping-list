@@ -16,6 +16,17 @@ class ShoppingList {
 
     this.items.push(item);
   }
+
+  removeItem(item) {
+    if (item === undefined) {
+      this.items.pop();
+    }
+    if (this.items.indexOf(item) === -1) {
+      return;
+    }
+    let index = this.items.indexOf(item);
+    this.items.splice(index, 1);
+  }
 }
 
 module.exports = ShoppingList;
