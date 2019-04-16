@@ -10,8 +10,8 @@ class ShoppingList {
 
   addItem(item) {
     if (!(item instanceof ShoppingListItem)) {
-      throw TypeError('meow');
-    
+      //needs to be throw error
+      return;
     }
 
     this.items.push(item);
