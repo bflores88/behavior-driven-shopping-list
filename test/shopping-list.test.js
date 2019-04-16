@@ -17,6 +17,11 @@ describe('Shopping List', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
     apple.description.should.equal('tasty treat');
   });
+
+  it('should have a property named isdone', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    apple.isDone.should.equal(false);
+  });
 });
 
 console.log(ShoppingListItem);
