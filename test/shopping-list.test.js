@@ -1,7 +1,7 @@
 const ShoppingListItem = require('../public/js/app.js');
 const chai = require('chai');
 const should = chai.should();
-const expect = chai.expect();
+const expect = chai.expect;
 
 describe('Shopping List', function() {
   it('should be a function', function() {
@@ -27,6 +27,17 @@ describe('Shopping List', function() {
     let apple = new ShoppingListItem('Apple', 'tasty treat');
     apple.description.should.equal('tasty treat');
     apple.name.should.equal('Apple');
+  });
+
+  it('check should be a function', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    expect(apple.check).to.be.a('function');
+  });
+
+  it('expect check method to set isDone to true', function (){
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    apple.check();
+    apple.isDone.should.equal(true);
   });
 });
 
