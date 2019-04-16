@@ -8,11 +8,15 @@ describe('Shopping List', function() {
     ShoppingListItem.should.be.a('function');
   });
 
-  it('should have a property name', function(){
-    let apple = new ShoppingListItem ('Apple');
-    apple.name.should.equal('Apple')
+  it('should have a property named name', function() {
+    let apple = new ShoppingListItem('Apple');
+    apple.name.should.equal('Apple');
   });
 
+  it('should have a property named description', function() {
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    apple.description.should.equal('tasty treat');
+  });
 });
 
 console.log(ShoppingListItem);

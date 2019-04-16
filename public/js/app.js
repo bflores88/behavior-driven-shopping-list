@@ -1,6 +1,7 @@
 class ShoppingListItem {
-  constructor (name){
-    this.name = name
+  constructor(name, description) {
+    this.name = name;
+    this.description = description;
   }
 }
 
