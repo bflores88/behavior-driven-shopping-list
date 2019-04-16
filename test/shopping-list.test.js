@@ -83,4 +83,14 @@ describe('Shopping List', function() {
     expect(cart.items).to.equal(null);
   });
 
+  // empty cart method
+  it('empty cart should be a function', function() {
+    let cart = new ShoppingList();
+    expect(cart.emptyCart).to.be.a('function');
+  });
+  it('empty cart should initialize items as an empty array', function() {
+    let cart = new ShoppingList();
+    cart.emptyCart();
+    expect(cart.items).to.deep.equal([]);
+  });
 });

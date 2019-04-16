@@ -19,12 +19,15 @@ class ShoppingListItem {
 }
 
 class ShoppingList {
-  constructor(){
+  constructor() {
     this.items = null;
+    this.emptyCart = function() {
+      this.items = [];
+    };
   }
 }
 
 module.exports = {
   ShoppingListItem: ShoppingListItem,
-  ShoppingList: ShoppingList
-}
+  ShoppingList: ShoppingList,
+};
