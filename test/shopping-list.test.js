@@ -1,5 +1,6 @@
-const ShoppingListItem = require('../public/js/app.js');
-const ShoppingList = require('../public/js/app.js');
+const Shopping = require('../public/js/app.js');
+const ShoppingListItem = Shopping.ShoppingListItem;
+const ShoppingList = Shopping.ShoppingList;
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
@@ -71,7 +72,15 @@ describe('Shopping List Item', function() {
 });
 
 describe('Shopping List', function() {
+  //class test
   it('should be a function', function() {
     ShoppingList.should.be.a('function');
   });
+
+  //tests for items property
+  it('should have a property named items', function() {
+    let cart = new ShoppingList();
+    expect(cart.items).to.equal(null);
+  });
+
 });

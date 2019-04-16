@@ -18,6 +18,13 @@ class ShoppingListItem {
   }
 }
 
-class ShoppingList {}
+class ShoppingList {
+  constructor(){
+    this.items = null;
+  }
+}
 
-(module.exports = ShoppingListItem), ShoppingList;
+module.exports = {
+  ShoppingListItem: ShoppingListItem,
+  ShoppingList: ShoppingList
+}
