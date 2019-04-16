@@ -1,6 +1,6 @@
-const Shopping = require('../public/js/app.js');
-const ShoppingListItem = Shopping.ShoppingListItem;
-const ShoppingList = Shopping.ShoppingList;
+
+const ShoppingListItem = require('../public/js/shopping-list-item.js');
+const ShoppingList = require('../public/js/shopping-list.js');
 const chai = require('chai');
 const should = chai.should();
 const expect = chai.expect;
@@ -80,7 +80,7 @@ describe('Shopping List', function() {
   //tests for items property
   it('should have a property named items', function() {
     let cart = new ShoppingList();
-    expect(cart.items).to.equal(null);
+    expect(cart.items).to.deep.equal([]);
   });
 
   // empty cart method
@@ -93,4 +93,20 @@ describe('Shopping List', function() {
     cart.emptyCart();
     expect(cart.items).to.deep.equal([]);
   });
+
+  //add item
+  it('should only add shopping list item items', function(){
+    let cart = new ShoppingList();
+    let bird = {};
+    cart.addItem(bird);
+    expect(cart.items).to.deep.equal([]);
+  });
+
+  it('should add shopping list item to the items array', function(){
+    let apple = new ShoppingListItem('Apple', 'tasty treat');
+    let cart = new ShoppingList();
+    cart.addItem(apple);
+    expect(cart.items).to.deep.equal([apple]);
+  });
+  
 });
