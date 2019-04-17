@@ -29,7 +29,7 @@ class ShoppingList {
   }
   // render
   render() {
-    let output = '<ul>';
+    let output = "<ul id='list'>";
     for (let i = 0; i < this.items.length; i++) {
       output += this.items[i].render();
     }
