@@ -9,18 +9,18 @@ li {
   }
 
   input[type='checkbox'] {
-    -webkit-appearance:none;
-    width:30px;
-    height:30px;
-    background:white;
-    border-radius:5px;
-    border:2px solid #555;
-    }
-    input[type='checkbox']:checked {
-        background: #abd;
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV-1WufvEr5NPUZ2Eh7jjQZ6ippl2Ms0HHKGj9ahoGbkzhWyu');
-        background-size: cover;
-    }
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+  }
+  input[type='checkbox']:checked {
+    background: #abd;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV-1WufvEr5NPUZ2Eh7jjQZ6ippl2Ms0HHKGj9ahoGbkzhWyu');
+    background-size: cover;
+  }
 
   button {
     background-color: rgb(216, 63, 63);
@@ -32,7 +32,6 @@ li {
     display: inline-block;
     font-size: 12px;
   }
-
 }
 
 #content {
@@ -40,9 +39,25 @@ li {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  font-family: 'Fresca', sans-serif;
+  font-size: 18px;
 }
 
 .checkbox {
   margin: 0px 10px 0px 10px;
 }
+#addShoppingListItemButton {
+  background-color: rgb(76, 179, 56);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
 
+.food {
+  position: fixed;
+  height: 200px;
+}
