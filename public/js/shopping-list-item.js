@@ -18,6 +18,6 @@ class ShoppingListItem {
   render() {
     return `<li class="completed_${this.isDone}"><span class="grocery">${
       this.name
-    }</span> <span class="groceryDescription">${this.description}</span><input type="checkbox" class="checkbox"><button class='xButton' type="button">X</button></li>`;
+    }</span> <span class="groceryDescription">${this.description}</span><span class="action"><input type="checkbox" class="checkbox"><button class='xButton' type="button">X</button></span></li>`;
   }
 }

@@ -3,6 +3,8 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted darkgray;
 
   span {
     margin: 0px 10px 0px 10px;
@@ -35,12 +37,18 @@ li {
 }
 
 #content {
-  width: auto;
+  max-width: 75%;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   font-family: 'Fresca', sans-serif;
   font-size: 18px;
+}
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkbox {

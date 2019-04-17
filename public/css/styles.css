@@ -25,7 +25,9 @@ li {
   margin: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px dotted darkgray; }
   li span {
     margin: 0px 10px 0px 10px; }
   li input[type='checkbox'] {
@@ -50,12 +52,17 @@ li {
     font-size: 12px; }
 
 #content {
-  width: auto;
+  max-width: 75%;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
   font-family: 'Fresca', sans-serif;
   font-size: 18px; }
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .checkbox {
   margin: 0px 10px 0px 10px; }
