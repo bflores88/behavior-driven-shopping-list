@@ -1,0 +1,121 @@
+#addShoppingListItemButton {
+  background-color: #4cb338;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 65%;
+  font-family: 'Fresca', sans-serif;
+  font-size: 100%; }
+  #addShoppingListItemButton:hover {
+    background-color: #186318; }
+  @media screen and (min-width: 600px) {
+    #addShoppingListItemButton {
+      width: 45%; } }
+
+#title, #description {
+  font-family: 'Fresca', sans-serif;
+  height: 30px;
+  border: 2px solid darkgray;
+  border-radius: 6px;
+  padding: 5px;
+  width: 70%;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 600px) {
+    #title, #description {
+      width: 45%; } }
+
+form {
+  font-family: 'Fresca', sans-serif;
+  font-size: 25px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  @media screen and (min-width: 600px) {
+    form {
+      display: block; } }
+
+ul {
+  padding: 0px; }
+
+li {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  max-width: 75%;
+  border-bottom: 2px dotted darkgray;
+  margin-left: 0px;
+  margin-right: auto; }
+  @media screen and (min-width: 600px) {
+    li {
+      max-width: 100%; } }
+  li span {
+    margin: 0px 10px 0px 10px; }
+  li input[type='checkbox'] {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555; }
+  li input[type='checkbox']:checked {
+    background: #abd;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV-1WufvEr5NPUZ2Eh7jjQZ6ippl2Ms0HHKGj9ahoGbkzhWyu");
+    background-size: cover; }
+  li button {
+    background-color: #d83f3f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; }
+    li button:hover {
+      cursor: pointer; }
+
+#content {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: 'Fresca', sans-serif;
+  font-size: 18px; }
+
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.checkbox {
+  margin: 0px 10px 0px 10px; }
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #86cc79; }
+
+h1 {
+  font-family: 'Dokdo', cursive;
+  font-size: 50px; }
+
+.food {
+  display: none; }
+  @media screen and (min-width: 800px) {
+    .food {
+      display: block;
+      position: fixed;
+      height: 200px; } }

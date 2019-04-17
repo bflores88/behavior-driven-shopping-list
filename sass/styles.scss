@@ -1,0 +1,23 @@
+@import 'input';
+@import 'items';
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(134, 204, 121);
+}
+h1 {
+  font-family: 'Dokdo', cursive;
+  font-size: 50px;
+}
+
+.food {
+  display:none;
+
+  @media screen and (min-width: 800px) {
+    display: block;
+    position: fixed;
+    height: 200px;
+  }
+}
