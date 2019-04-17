@@ -30,8 +30,18 @@ function addToShoppingList() {
   function changeCheckedStatus(idx, checkbox) {
     if (checkbox.checked) {
       cart.items[idx].check();
+      let getGrocery = document.getElementsByClassName('grocery');
+      getGrocery[idx].style.textDecoration = 'line-through';
+
+      let getGroceryDescription = document.getElementsByClassName('groceryDescription');
+      getGroceryDescription[idx].style.textDecoration = 'line-through';
     } else {
       cart.items[idx].unCheck();
+      let getGrocery = document.getElementsByClassName('grocery');
+      getGrocery[idx].style.textDecoration = 'none';
+
+      let getGroceryDescription = document.getElementsByClassName('groceryDescription');
+      getGroceryDescription[idx].style.textDecoration = 'none';
     }
   }
 
