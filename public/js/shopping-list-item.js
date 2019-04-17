@@ -16,6 +16,6 @@ class ShoppingListItem {
   }
 
   render() {
-    return `<input type="checkbox" class="checkbox completed_${this.isDone}"><span>${this.name}</span> <span>${this.description}</span>`;
+    return `<li class="completed_${this.isDone}"><input type="checkbox" class="checkbox"><span>${this.name}</span> <span>${this.description}</span></li>`;
   }
 }
