@@ -1,4 +1,12 @@
 #addShoppingListItemButton {
+  background-color: #4cb338;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -6,6 +14,8 @@
   width: 65%;
   font-family: 'Fresca', sans-serif;
   font-size: 100%; }
+  #addShoppingListItemButton:hover {
+    background-color: #186318; }
   @media screen and (min-width: 600px) {
     #addShoppingListItemButton {
       width: 45%; } }
@@ -35,13 +45,22 @@ form {
     form {
       display: block; } }
 
+ul {
+  padding: 0px; }
+
 li {
   margin: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: 2px dotted darkgray; }
+  max-width: 75%;
+  border-bottom: 2px dotted darkgray;
+  margin-left: 0px;
+  margin-right: auto; }
+  @media screen and (min-width: 600px) {
+    li {
+      max-width: 100%; } }
   li span {
     margin: 0px 10px 0px 10px; }
   li input[type='checkbox'] {
@@ -81,20 +100,6 @@ li {
 .checkbox {
   margin: 0px 10px 0px 10px; }
 
-#addShoppingListItemButton {
-  background-color: #4cb338;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px; }
-
-.food {
-  position: fixed;
-  height: 200px; }
-
 body {
   text-align: center;
   display: flex;
@@ -109,4 +114,6 @@ h1 {
   display: none; }
   @media screen and (min-width: 800px) {
     .food {
-      display: block; } }
+      display: block;
+      position: fixed;
+      height: 200px; } }
