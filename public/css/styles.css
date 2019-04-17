@@ -83,6 +83,8 @@ li {
     text-decoration: none;
     display: inline-block;
     font-size: 12px; }
+    li button:hover {
+      cursor: pointer; }
 
 #content {
   max-width: 75%;
