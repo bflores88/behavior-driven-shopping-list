@@ -1,0 +1,48 @@
+#addShoppingListItemButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 40%; }
+
+li {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  li span {
+    margin: 0px 10px 0px 10px; }
+  li input[type='checkbox'] {
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555; }
+  li input[type='checkbox']:checked {
+    background: #abd;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPV-1WufvEr5NPUZ2Eh7jjQZ6ippl2Ms0HHKGj9ahoGbkzhWyu");
+    background-size: cover; }
+  li button {
+    background-color: #d83f3f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px; }
+
+#content {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; }
+
+.checkbox {
+  margin: 0px 10px 0px 10px; }
+
+body {
+  text-align: center;
+  display: flex;
+  flex-direction: column; }
